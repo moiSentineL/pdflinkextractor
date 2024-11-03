@@ -2,6 +2,8 @@
 
 Originally made by [Glutanimate](https://askubuntu.com/a/395155).
 
+This script finds any `pdf` files hyperlinked in a webpage and provides output of the links or download them.
+
 ## Usage
 ### Bash One Liner
 
@@ -11,12 +13,14 @@ curl -fsSL https://nibirsan.org/pdflinkextractor/script.sh | sh -s - [-d] <websi
 
 Using `-d` will enable you to download the files instead of just saving the links. 
 
+To save the links to a file, just do `> file` at the end the of the command.
+
 ### Local
 
 ```bash
 git clone https://github.com/moiSentineL/pdflinkextractor.git
 cd pdflinkextractor && chmod +x script.sh
-./script.sh
+./script.sh [-d] <website>
 ```
 
 > [!TIP]

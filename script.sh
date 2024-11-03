@@ -37,13 +37,14 @@ fi
 echo "Getting link list..."
 
 # Extract PDF links
-lynx -cache=0 -dump -listonly "$WEBSITE" | grep ".*\.pdf$" | awk '{print $2}' | tee pdflinks.txt
+lynx -cache=0 -dump -listonly "$WEBSITE" | grep ".*\.pdf$" | awk '{print $2}' | tee /tmp/pdflinks.txt
 
 # Download files if -d option is provided
 if [ "$DOWNLOAD" = true ]; then
   echo "Downloading..."
-  wget -i pdflinks.txt
+  wget -i /tmp/pdflinks.txt
 fi
 
+rm /tmp/pdflinks.txt
 
 
