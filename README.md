@@ -13,7 +13,7 @@ curl -fsSL https://nibirsan.org/pdflinkextractor/script.sh | sh -s - [-d] <websi
 
 Using `-d` will enable you to download the files instead of just saving the links. 
 
-To save the links to a file, just do `> file` at the end the of the command.
+To save the links to a file, just do `> file` at the end of the command.
 
 ### Local
 
